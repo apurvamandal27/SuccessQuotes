@@ -30,7 +30,7 @@
                 android:id="@+id/btn_2"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:text="वचार 11 से 20 तक"
+                android:text="विचार 1 से 10 तक"
                 android:textSize="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal|bottom"
