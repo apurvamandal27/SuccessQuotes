@@ -5,11 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/mybackground"
+
     tools:context="com.example.apurva.successquotes.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
 
     <ScrollView
         android:layout_width="match_parent"
+        android:background="@drawable/mybackground"
         android:layout_height="match_parent">
 
         <LinearLayout
