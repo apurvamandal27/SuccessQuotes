@@ -29,7 +29,39 @@ public class SecondActivity extends AppCompatActivity {
         }
         //
         myListView=findViewById(R.id.myListView);
-        myArray=getResources().getStringArray(R.array.myarray);
+        switch (MainActivity.count){
+            case 0:
+                myArray=getResources().getStringArray(R.array.myarray);
+                break;
+            case 1:
+                myArray=getResources().getStringArray(R.array.array2);
+                break;
+            case 2:
+                myArray=getResources().getStringArray(R.array.array3);
+                break;
+            case 3:
+                myArray=getResources().getStringArray(R.array.array4);
+                break;
+            case 4:
+                myArray=getResources().getStringArray(R.array.array5);
+                break;
+            case 5:
+                myArray=getResources().getStringArray(R.array.array6);
+                break;
+            case 6:
+                myArray=getResources().getStringArray(R.array.array7);
+                break;
+            case 7:
+                myArray=getResources().getStringArray(R.array.array8);
+                break;
+            case 8:
+                myArray=getResources().getStringArray(R.array.array9);
+                break;
+            case 9:
+                myArray=getResources().getStringArray(R.array.array10);
+                break;
+        }
+
 
         CustomAdapter customAdapter=new CustomAdapter();
         myListView.setAdapter(customAdapter);
