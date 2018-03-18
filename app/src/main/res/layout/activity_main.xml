@@ -1,16 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b7b1b1"
+    android:orientation="vertical"
+    android:background="@drawable/mybackground"
     tools:context="com.example.apurva.successquotes.MainActivity">
 
-    <com.example.apurva.successquotes.HindiTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="35dp"
-        android:textColor="#fa154a"
-        android:text="आइये अपने गुरुओं के सम्मान में शिक्षक दिवस पर कुछ अनमोल वचन पढ़ें|"/>
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 1 से 10 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="वचार 11 से 20 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+
+            <Button
+                android:id="@+id/btn_3"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 21 से 30 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+            <Button
+                android:id="@+id/btn_4"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 31 से 40 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+            <Button
+                android:id="@+id/btn_5"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 41 से 50 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+
+            <Button
+                android:id="@+id/btn_6"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 51 से 60 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+            <Button
+                android:id="@+id/btn_7"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 61 से 70 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+            <Button
+                android:id="@+id/btn_8"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 71 से 80 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+
+            <Button
+                android:id="@+id/btn_9"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 81 से 90 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+
+            <Button
+                android:id="@+id/btn_10"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="विचार 91 से 100 तक"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@drawable/mycustombutton" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
