@@ -1,5 +1,8 @@
 package com.example.apurva.successquotes;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -91,11 +95,47 @@ public class SecondActivity extends AppCompatActivity {
             convertView=getLayoutInflater().inflate(R.layout.custom_layout,null);
             ImageView img1=convertView.findViewById(R.id.img1);
             ImageView img2=convertView.findViewById(R.id.img2);
-            TextView quotes=convertView.findViewById(R.id.textView);
+            final TextView quotes=convertView.findViewById(R.id.textView);
 
             img1.setImageResource(images[0]);
             img2.setImageResource(images[1]);
             quotes.setText(myArray[position]);
+
+            img2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ClipboardManager myClipboard;
+                    myClipboard= (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+
+                    ClipData myclip;
+
+                    String text=quotes.getText().toString();
+                    myclip=ClipData.newPlainText("text",text);
+                    myClipboard.setPrimaryClip(myclip);
+                    Toast.makeText(SecondActivity.this, "कॉपी हो गया ", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            img1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ClipboardManager myClipboard;
+                    myClipboard= (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+
+                    ClipData myclip;
+
+                    String text=quotes.getText().toString();
+                    myclip=ClipData.newPlainText("text",text);
+                    myClipboard.setPrimaryClip(myclip);
+
+                    Intent sharingIntent=new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String shareBody=text;
+                    sharingIntent.putExtra(Intent.EXTRA_SUBJECT,"Subject here");
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                    startActivity(Intent.createChooser(sharingIntent,"Share via"));
+                }
+            });
 
 
             return convertView;
